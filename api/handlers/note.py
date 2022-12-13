@@ -21,8 +21,10 @@ def get_note_by_id(note_id):
     note = get_object_or_404(NoteModel, note_id)
     notes = NoteModel.query.join(NoteModel.author).filter((UserModel.id == user.id) | (NoteModel.private == False))
     if note in notes:
-        return note, 200
-    return "Not your note!", 403
+        if not note.archive:
+            return note, 200
+        return "Not found", 404
+    return "Forbidden", 403
     # if note.author_id == user.id or not note.private:
     #     return note_schema.dump(note), 200
     # return f"Note is private", 403
@@ -35,7 +37,7 @@ def get_note_by_id(note_id):
 @doc(security=[{"basicAuth": []}])
 def get_notes():
     user = multi_auth.current_user()
-    notes = NoteModel.query.join(NoteModel.author).filter((UserModel.id == user.id) | (NoteModel.private == False))
+    notes = NoteModel.query.join(NoteModel.author).filter((UserModel.id == user.id) | (NoteModel.private == False) & (NoteModel.archive == False))
     return notes, 200
 
 

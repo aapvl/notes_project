@@ -33,8 +33,8 @@
 |        :x:         | Low                   |                              | [Публичные заметки по имени автора](#Публичные-заметки-по-имени-автора) | GET: /notes/filter?username=<username>                     |
 |        :x:         | High                  | ![fa-crown](icons/lock.png)  | Редактирование заметки                                                  | PUT: /notes/{id}                                           |
 | :heavy_check_mark: | Medium                | ![fa-crown](icons/lock.png)  | ~~Удаление заметки~~ Архивирование заметки                              | DELETE: /notes/{id}                                        |
-|        :x:         | Medium                | ![fa-crown](icons/lock.png)  | Восстановление заметки из архива                                        | PUT: ???                                                   |
-|        :x:         | Medium                | ![fa-crown](icons/lock.png)  | Просмотр архивных заметок                                               | GET: ???                                                   |
+| :heavy_check_mark: | Medium                | ![fa-crown](icons/lock.png)  | Восстановление заметки из архива                                        | PUT: ???                                                   |
+| :heavy_check_mark: | Medium                | ![fa-crown](icons/lock.png)  | Просмотр архивных заметок                                               | GET: ???                                                   |
 | :heavy_check_mark: | Base                  | ![fa-crown](icons/lock.png)  | [Добавление тегов заметке](#-Добавление-тегов-к-заметке)                | PUT: /notes/<note_id>/tags \ body: {“tags”: [id1, id2]}    |
 |        :x:         | Medium                | ![fa-crown](icons/lock.png)  | Удаление тегов с заметок                                                | DELETE: /notes/<note_id>/tags \ body: {“tags”: [id1, id2]} |
 
