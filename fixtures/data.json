@@ -1,0 +1,66 @@
+{
+    "user_model": [
+        {
+            "id": 1,
+            "username": "new",
+            "password_hash": "$6$rounds=656000$xVfOxBxtQtQIDsem$33V.cjlYC7kVjR8CEgPgWVZhXttRZ4mKxYrXiTwKm9L.MTjfNAnHBDdFg9oZMwS7gjwWxgnNPGQAvpwqa/gu71",
+            "role": "simple_user"
+        },
+        {
+            "id": 2,
+            "username": "admin2",
+            "password_hash": "$6$rounds=656000$Uj2MZNO/TS.AzIoo$MVNQIekpnmBbO0go3PKx/bC/bFZT4QEIeJT5d/QeN9Z0ZW619kIMmf52HhdrypNhfLN5i9Q6f2xHpOYn6e30p1",
+            "role": "admin"
+        },
+        {
+            "id": 3,
+            "username": "new_user",
+            "password_hash": "$6$rounds=656000$7pVGi4DiNvDUnjRm$5XW29POrxMtCzt9WJTEuXSyTwFUXT79f9yWgTWOHidYSBY55tlAdXTmSW.x0DiMU5OGZSQqWiXu2Pc2lJ1jXJ/",
+            "role": "simple_user"
+        }
+    ],
+    "note_model": [
+        {
+            "id": 1,
+            "author_id": 1,
+            "text": "Заметка админа 1",
+            "private": false
+        },
+        {
+            "id": 2,
+            "author_id": 1,
+            "text": "swagger edited note",
+            "private": true
+        },
+        {
+            "id": 4,
+            "author_id": 2,
+            "text": "swagger note",
+            "private": true
+        },
+        {
+            "id": 5,
+            "author_id": 2,
+            "text": "swagger note user 1",
+            "private": false
+        },
+        {
+            "id": 6,
+            "author_id": 2,
+            "text": "another note user 1",
+            "private": true
+        },
+        {
+            "id": 7,
+            "author_id": 1,
+            "text": "note from json 1",
+            "private": true
+        },
+        {
+            "id": 8,
+            "author_id": 1,
+            "text": "note from json 2",
+            "private": false
+        }
+    ]
+}
